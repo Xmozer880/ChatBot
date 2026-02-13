@@ -83,7 +83,7 @@ function askRapidAPI(userText) {
     };
 
     const xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
+    xhr.withCredentials = false;
 
     // ✅ Timeout: “la API no responde”
     xhr.timeout = 15000;
@@ -184,3 +184,4 @@ if (quickQuestions) {
     await sendUserMessage(q);
   });
 }
+
