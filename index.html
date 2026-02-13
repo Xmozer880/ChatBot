@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ChatBot Ivan</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>ChatBot Ivan</h1>
+      <p class="subtitle">FAQ · Taller de coches</p>
+    </header>
+
+    <section class="chat">
+      <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+
+      <!-- ✅ Opción A: Preguntas predefinidas -->
+      <div class="quick-questions" id="quickQuestions" aria-label="Preguntas frecuentes">
+        <button type="button" class="qq" data-q="¿Cómo puedo pedir cita y qué horarios tenéis?">Pedir cita / Horarios</button>
+        <button type="button" class="qq" data-q="¿Qué precio tiene el cambio de aceite y filtros y qué incluye?">Aceite y filtros</button>
+        <button type="button" class="qq" data-q="¿Cuánto tardáis normalmente en una revisión o reparación?">Tiempos</button>
+        <button type="button" class="qq" data-q="¿Ofrecéis coche de sustitución o recogida y entrega?">Coche / Recogida</button>
+        <button type="button" class="qq" data-q="¿Qué garantía dais en las reparaciones y piezas instaladas?">Garantía</button>
+      </div>
+
+      <form id="chatForm" class="chat-input" autocomplete="off">
+        <input
+          id="userInput"
+          type="text"
+          placeholder="Escribe tu pregunta…"
+          aria-label="Escribe tu pregunta"
+          required
+        />
+        <button id="sendBtn" type="submit">Enviar</button>
+      </form>
+
+      <p class="hint">
+        Consejo: también puedes tocar una pregunta rápida arriba.
+      </p>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
